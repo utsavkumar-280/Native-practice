@@ -9,6 +9,7 @@ import {
 	TextInput,
 	Switch,
 	Image,
+	Alert,
 } from "react-native";
 
 export default function App() {
@@ -17,10 +18,37 @@ export default function App() {
 		<SafeAreaView style={styles.container}>
 			<StatusBar style="auto" />
 			<Image
-				blurRadius={0.9}
+				blurRadius={0.5}
 				source={{ uri: "https://picsum.photos/200/400" }}
 				style={styles.pic1}
 			/>
+			<Text>Hello</Text>
+			<View
+				style={{
+					backgroundColor: "white",
+					padding: 1,
+					borderWidth: 1,
+					borderColor: "green",
+				}}
+			>
+				<Button
+					title="Click Me"
+					onPress={() =>
+						Alert.alert("Pay", "Amount $299", [
+							{ text: "Cancel", onPress: () => alert("Chalta Hu Bhai") },
+							{ text: "Ok" },
+						])
+					}
+				/>
+				<Button
+					title="Touch Me"
+					onPress={() =>
+						Alert.prompt("Question 1", "What is your Name?", (text) =>
+							alert(`Thaaga Bhai, tera naam ${text} hai`)
+						)
+					}
+				/>
+			</View>
 		</SafeAreaView>
 	);
 }
