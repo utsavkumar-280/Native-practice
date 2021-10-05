@@ -1,16 +1,30 @@
 import React from "react";
-import { View, Image, StyleSheet } from "react-native";
+import {
+	SafeAreaView,
+	View,
+	Image,
+	StyleSheet,
+	ImageBackground,
+} from "react-native";
 
 import colors from "../config/colors";
 import AppText from "../components/AppText";
+import ListItems from "../components/ListItems";
 
 function ListingDetailsScreen(props) {
 	return (
 		<View>
+			<Image style={styles.image} source={require("../assets/jacket.jpg")} />
 			<View style={styles.detailsContainer}>
-				<Image style={styles.image} source={require("../assets/icon.png")} />
 				<AppText style={styles.title}>Red Jacket</AppText>
 				<AppText style={styles.price}>$100</AppText>
+				<View style={styles.listContainer}>
+					<ListItems
+						title="Utsav Kumar"
+						subTitle="10 products"
+						image={require("../assets/pfp03.png")}
+					/>
+				</View>
 			</View>
 		</View>
 	);
@@ -19,7 +33,7 @@ function ListingDetailsScreen(props) {
 const styles = StyleSheet.create({
 	image: {
 		width: "100%",
-		height: 300,
+		height: 350,
 	},
 	detailsContainer: {
 		padding: 20,
@@ -32,6 +46,10 @@ const styles = StyleSheet.create({
 		color: colors.secondary,
 		fontWeight: "800",
 		fontSize: 20,
+		marginVertical: 5,
+	},
+	listContainer: {
+		marginVertical: 25,
 	},
 });
 
