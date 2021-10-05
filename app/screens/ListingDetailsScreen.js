@@ -7,8 +7,8 @@ import AppText from "../components/AppText";
 function ListingDetailsScreen(props) {
 	return (
 		<View>
-			<Image style={styles.image} source={require("../assets/jacket.jpg")} />
 			<View style={styles.detailsContainer}>
+				<Image style={styles.image} source={require("../assets/icon.png")} />
 				<AppText style={styles.title}>Red Jacket</AppText>
 				<AppText style={styles.price}>$100</AppText>
 			</View>
