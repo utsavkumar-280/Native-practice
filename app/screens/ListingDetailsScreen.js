@@ -23,6 +23,7 @@ function ListingDetailsScreen(props) {
 						title="Utsav Kumar"
 						subTitle="10 products"
 						image={require("../assets/pfp03.png")}
+						style={{ padding: 0 }}
 					/>
 				</View>
 			</View>
