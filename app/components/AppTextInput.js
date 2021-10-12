@@ -16,7 +16,11 @@ const AppTextInput = ({ icon, ...otherProps }) => {
 					style={styles.icon}
 				/>
 			)}
-			<TextInput style={defaultStyles.text} {...otherProps} />
+			<TextInput
+				style={[defaultStyles.text, { flex: 1 }]}
+				{...otherProps}
+				placeholderTextColor={defaultStyles.colors.medium}
+			/>
 		</View>
 	);
 };
@@ -26,10 +30,10 @@ export default AppTextInput;
 const styles = StyleSheet.create({
 	container: {
 		backgroundColor: colors.light,
-		borderRadius: 25,
+		borderRadius: 30,
 		flexDirection: "row",
 		width: "100%",
-		padding: 10,
+		padding: 7.5,
 		marginVertical: 10,
 	},
 

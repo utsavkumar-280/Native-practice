@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
 		fontSize: 17.5,
 	},
 	subTitle: {
-		color: "dodgerblue",
+		color: colors.secondary,
 		fontWeight: "bold",
 	},
 });
